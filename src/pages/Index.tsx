@@ -116,10 +116,7 @@ const Index = () => {
             size="lg" 
             onClick={() => scrollToSection('contacts')}
             className="gap-2"
-          >
-            <Icon name="Phone" size={18} />
-            Записаться на услугу
-          </Button>
+          >+ 7 994 408-00-05</Button>
         </div>
       </section>
 
