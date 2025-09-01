@@ -272,10 +272,7 @@ const Index = () => {
                   </p>
                   <div className="space-y-3">
                     <Button className="w-full" size="lg" asChild>
-                      <a href="tel:+79944080005">
-                        <Icon name="Phone" size={18} className="mr-2" />
-                        Позвонить нам
-                      </a>
+                      <a href="tel:+79944080005">+ 7 994 408-00-05</a>
                     </Button>
                     <Button variant="outline" className="w-full" size="lg" asChild>
                       <a href="https://t.me/checkpointserv1ce" target="_blank" rel="noopener noreferrer">
