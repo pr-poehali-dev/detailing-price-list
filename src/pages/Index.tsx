@@ -70,7 +70,7 @@ const Index = () => {
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-foreground">CheckPoint Service</h1>
-                <p className="text-sm text-primary">Автодетейлинг премиум-класса</p>
+                <p className="text-sm text-primary"></p>
               </div>
             </div>
             <nav className="hidden md:flex gap-6">
@@ -106,7 +106,7 @@ const Index = () => {
         <div className="absolute bottom-10 left-10 opacity-5">
           <img src="https://cdn.poehali.dev/files/9533cade-b471-429c-b41f-6973f98228c3.png" alt="" className="w-48 h-48 rounded-full" />
         </div>
-        <div className="container mx-auto px-4 text-center">
+        <div className="absolute inset-0 from-black/60 to-transparent bg-transparent">
           <h2 className="text-5xl font-bold mb-6 text-foreground">
             Профессиональный автодетейлинг
           </h2>
