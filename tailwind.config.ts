@@ -61,6 +61,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				'checkpoint': {
+					dark: '#1F2937',
+					gray: '#6B7280',
+					green: '#10B981',
+					light: '#F9FAFB',
 				}
 			},
 			borderRadius: {
