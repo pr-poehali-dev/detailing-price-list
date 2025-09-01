@@ -107,9 +107,7 @@ const Index = () => {
           <img src="https://cdn.poehali.dev/files/9533cade-b471-429c-b41f-6973f98228c3.png" alt="" className="w-48 h-48 rounded-full" />
         </div>
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-5xl font-bold mb-6 text-foreground">
-            Профессиональный автодетейлинг
-          </h2>
+          <h2 className="font-bold mb-6 text-foreground text-4xl">Профессиональный детейлинг в автосервисе</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Полный спектр услуг по уходу за вашим автомобилем. Качественная работа, 
             современное оборудование, гарантия результата.
