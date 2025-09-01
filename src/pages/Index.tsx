@@ -56,18 +56,21 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border">
+      <header className="sticky top-0 z-50 bg-card/95 backdrop-blur border-b border-primary/20">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <img 
-                src="https://cdn.poehali.dev/files/9533cade-b471-429c-b41f-6973f98228c3.png" 
-                alt="CheckPoint Service" 
-                className="w-12 h-12 rounded-full"
-              />
+              <div className="relative">
+                <img 
+                  src="https://cdn.poehali.dev/files/9533cade-b471-429c-b41f-6973f98228c3.png" 
+                  alt="CheckPoint Service" 
+                  className="w-12 h-12 rounded-full border-2 border-primary/30"
+                />
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-primary rounded-full border-2 border-card"></div>
+              </div>
               <div>
                 <h1 className="text-2xl font-bold text-foreground">CheckPoint Service</h1>
-                <p className="text-sm text-muted-foreground">Автодетейлинг премиум-класса</p>
+                <p className="text-sm text-primary">Автодетейлинг премиум-класса</p>
               </div>
             </div>
             <nav className="hidden md:flex gap-6">
@@ -96,7 +99,13 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="py-20 bg-gradient-to-br from-background to-secondary/20">
+      <section id="home" className="py-20 bg-gradient-to-br from-background via-secondary/10 to-primary/5 relative overflow-hidden">
+        <div className="absolute top-10 right-10 opacity-10">
+          <img src="https://cdn.poehali.dev/files/9533cade-b471-429c-b41f-6973f98228c3.png" alt="" className="w-32 h-32 rounded-full" />
+        </div>
+        <div className="absolute bottom-10 left-10 opacity-5">
+          <img src="https://cdn.poehali.dev/files/9533cade-b471-429c-b41f-6973f98228c3.png" alt="" className="w-48 h-48 rounded-full" />
+        </div>
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-5xl font-bold mb-6 text-foreground">
             Профессиональный автодетейлинг
@@ -131,7 +140,7 @@ const Index = () => {
             <CardContent>
               <div className="grid gap-4">
                 {services.body.map((service, index) => (
-                  <div key={index} className="flex justify-between items-center p-4 rounded-lg bg-secondary/50 hover:bg-secondary/70 transition-colors">
+                  <div key={index} className="flex justify-between items-center p-4 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors border border-primary/10 hover:border-primary/20">
                     <span className="font-medium">{service.name}</span>
                     <span className="font-bold text-primary">{service.price}</span>
                   </div>
@@ -153,7 +162,7 @@ const Index = () => {
             <CardContent>
               <div className="grid gap-4">
                 {services.interior.map((service, index) => (
-                  <div key={index} className="flex justify-between items-center p-4 rounded-lg bg-secondary/50 hover:bg-secondary/70 transition-colors">
+                  <div key={index} className="flex justify-between items-center p-4 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors border border-primary/10 hover:border-primary/20">
                     <span className="font-medium">{service.name}</span>
                     <span className="font-bold text-primary">{service.price}</span>
                   </div>
@@ -175,7 +184,7 @@ const Index = () => {
             <CardContent>
               <div className="grid gap-4">
                 {services.films.map((service, index) => (
-                  <div key={index} className="flex justify-between items-center p-4 rounded-lg bg-secondary/50 hover:bg-secondary/70 transition-colors">
+                  <div key={index} className="flex justify-between items-center p-4 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors border border-primary/10 hover:border-primary/20">
                     <span className="font-medium">{service.name}</span>
                     <span className="font-bold text-primary">{service.price}</span>
                   </div>
@@ -197,7 +206,10 @@ const Index = () => {
             <CardContent>
               <div className="grid gap-6">
                 {services.packages.map((service, index) => (
-                  <div key={index} className="p-6 rounded-lg bg-secondary/50 hover:bg-secondary/70 transition-colors">
+                  <div key={index} className="p-6 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors border border-primary/10 hover:border-primary/20 relative">
+                    <div className="absolute top-2 right-2 opacity-20">
+                      <img src="https://cdn.poehali.dev/files/9533cade-b471-429c-b41f-6973f98228c3.png" alt="" className="w-8 h-8 rounded-full" />
+                    </div>
                     <div className="flex justify-between items-start mb-2">
                       <h3 className="font-semibold text-lg">{service.name}</h3>
                       <span className="font-bold text-primary text-lg">{service.price}</span>
@@ -222,7 +234,7 @@ const Index = () => {
             <CardContent>
               <div className="grid gap-4">
                 {services.additional.map((service, index) => (
-                  <div key={index} className="flex justify-between items-center p-4 rounded-lg bg-secondary/50 hover:bg-secondary/70 transition-colors">
+                  <div key={index} className="flex justify-between items-center p-4 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors border border-primary/10 hover:border-primary/20">
                     <span className="font-medium">{service.name}</span>
                     <span className="font-bold text-primary">{service.price}</span>
                   </div>
@@ -263,10 +275,20 @@ const Index = () => {
                     Цены являются ориентировочными. 
                     Уточняйте стоимость у менеджера.
                   </p>
-                  <Button className="w-full" size="lg">
-                    <Icon name="MessageCircle" size={18} className="mr-2" />
-                    Связаться с нами
-                  </Button>
+                  <div className="space-y-3">
+                    <Button className="w-full" size="lg" asChild>
+                      <a href="tel:+79944080005">
+                        <Icon name="Phone" size={18} className="mr-2" />
+                        Позвонить нам
+                      </a>
+                    </Button>
+                    <Button variant="outline" className="w-full" size="lg" asChild>
+                      <a href="https://t.me/checkpointserv1ce" target="_blank" rel="noopener noreferrer">
+                        <Icon name="MessageCircle" size={18} className="mr-2" />
+                        Telegram: @checkpointserv1ce
+                      </a>
+                    </Button>
+                  </div>
                 </div>
               </div>
             </CardContent>
@@ -275,15 +297,25 @@ const Index = () => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-secondary/30 py-8">
+      <footer className="bg-card border-t border-primary/20 py-8">
         <div className="container mx-auto px-4 text-center">
-          <div className="flex items-center justify-center gap-4 mb-4">
-            <img 
-              src="https://cdn.poehali.dev/files/9533cade-b471-429c-b41f-6973f98228c3.png" 
-              alt="CheckPoint Service" 
-              className="w-8 h-8 rounded-full"
-            />
-            <span className="font-semibold">CheckPoint Service</span>
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="flex items-center gap-3">
+              <img 
+                src="https://cdn.poehali.dev/files/9533cade-b471-429c-b41f-6973f98228c3.png" 
+                alt="CheckPoint Service" 
+                className="w-10 h-10 rounded-full border border-primary/30"
+              />
+              <span className="font-bold text-lg text-primary">CheckPoint Service</span>
+            </div>
+          </div>
+          <div className="flex justify-center gap-6 mb-4">
+            <a href="tel:+79944080005" className="text-muted-foreground hover:text-primary transition-colors">
+              <Icon name="Phone" size={20} />
+            </a>
+            <a href="https://t.me/checkpointserv1ce" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <Icon name="MessageCircle" size={20} />
+            </a>
           </div>
           <p className="text-muted-foreground">
             © 2024 CheckPoint Service. Все права защищены.
