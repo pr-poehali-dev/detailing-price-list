@@ -70,7 +70,7 @@ const Index = () => {
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-foreground">CheckPoint Service</h1>
-                <p className="text-sm text-primary">Автодетейлинг премиум-класса</p>
+                <p className="text-sm text-primary"></p>
               </div>
             </div>
             <nav className="hidden md:flex gap-6">
